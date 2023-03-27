@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BurgerController">
+   <children>
+      <Button fx:id="theClassic" layoutX="32.0" layoutY="60.0" mnemonicParsing="false" onAction="#chooseClassic" styleClass="buttons" stylesheets="@../cas/stylesheet.css">
+         <graphic>
+            <ImageView fx:id="classic" fitHeight="119.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/1494459418304.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="38.0" layoutY="25.0" text="The Classic">
+         <font>
+            <Font name="Sansation Bold" size="23.0" />
+         </font></Label>
+      <Button fx:id="cart" layoutX="557.0" layoutY="321.0" mnemonicParsing="false" onAction="#addToCart" styleClass="addToCart" stylesheets="@../cas/stylesheet.css" text="Add to cart" />
+      <VBox layoutX="561.0" layoutY="60.0" prefHeight="174.0" prefWidth="179.0" spacing="20.0">
+         <children>
+            <ChoiceBox fx:id="size" prefHeight="17.0" prefWidth="87.0" stylesheets="@../cas/stylesheet.css" />
+            <ChoiceBox fx:id="bun" prefWidth="150.0" stylesheets="@../cas/stylesheet.css" />
+            <CheckBox fx:id="ketchup" mnemonicParsing="false" text="Ketchup" />
+            <CheckBox fx:id="mustard" mnemonicParsing="false" text="Mustard" />
+            <CheckBox fx:id="mayonaise" mnemonicParsing="false" text="Mayonaise" />
+         </children>
+      </VBox>
+      <Label layoutX="262.0" layoutY="25.0" text="Mighty Angus">
+         <font>
+            <Font name="Sansation Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="206.0" text="Big Bertha">
+         <font>
+            <Font name="Sansation Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="206.0" text="Steakhouse">
+         <font>
+            <Font name="Sansation Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="angus" layoutX="256.0" layoutY="60.0" mnemonicParsing="false" onAction="#chooseAngus" styleClass="buttons" stylesheets="@../cas/stylesheet.css">
+         <graphic>
+            <ImageView fx:id="classic1" fitHeight="119.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/20150702-sous-vide-hamburger-anova-primary-1500x1125.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="bertha" layoutX="32.0" layoutY="241.0" mnemonicParsing="false" onAction="#chooseBertha" styleClass="buttons" stylesheets="@../cas/stylesheet.css">
+         <graphic>
+            <ImageView fitHeight="119.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/1517424682-salmon-burger-delish-1.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="steak" layoutX="256.0" layoutY="241.0" mnemonicParsing="false" onAction="#chooseSteak" styleClass="buttons" stylesheets="@../cas/stylesheet.css">
+         <graphic>
+            <ImageView fx:id="classic2" fitHeight="119.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/1494459418304.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="burgerName" layoutX="557.0" layoutY="25.0" text="Burger Customizations">
+         <font>
+            <Font name="Sansation Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancel" layoutX="650.0" layoutY="321.0" mnemonicParsing="false" onAction="#cancelOrder" text="Cancel" />
+      <Label fx:id="quantityLabel" layoutX="558.0" layoutY="282.0" text="1" />
+      <Button fx:id="inc" layoutX="587.0" layoutY="278.0" mnemonicParsing="false" onAction="#increaseQuantity" prefHeight="25.0" prefWidth="28.0" text="+" />
+      <Button fx:id="dec" layoutX="627.0" layoutY="278.0" mnemonicParsing="false" onAction="#decreaseQuantity" prefHeight="25.0" prefWidth="28.0" text="-" />
+   </children>
+</Pane>
